@@ -19,6 +19,143 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/deploy/img/footer/logo.png": {
+		"ft": 32768,
+		"iS": 2188,
+		"oA": 0,
+		"oAP": "/deploy/img/footer/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/deploy/img/header/hero.jpg": {
+		"ft": 16384,
+		"iS": 1457140,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/header/hero.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/deploy/img/header/logo.png": {
+		"ft": 32768,
+		"iS": 2579,
+		"oA": 0,
+		"oAP": "/deploy/img/header/logo.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/deploy/img/section-1/visit.jpg": {
+		"ft": 16384,
+		"iS": 443392,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-1/visit.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/deploy/img/section-3/boardwalk": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-3/boardwalk",
+		"oF": 0
+		},
+	"/deploy/img/section-3/hammocks.jpg": {
+		"ft": 16384,
+		"iS": 160961,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-3/hammocks.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/deploy/img/section-3/oasis.jpg": {
+		"ft": 16384,
+		"iS": 217255,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-3/oasis.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/deploy/img/section-4/foodtruck.jpg": {
+		"ft": 16384,
+		"iS": 653170,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-4/foodtruck.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/deploy/img/section-6/icecream.jpg": {
+		"ft": 16384,
+		"iS": 1037330,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-6/icecream.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/deploy/img/section-7/art.jpg": {
+		"ft": 16384,
+		"iS": 175821,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-7/art.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/deploy/img/section-7/concert.jpg": {
+		"ft": 16384,
+		"iS": 101582,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-7/concert.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/deploy/img/section-7/skating": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-7/skating",
+		"oF": 0
+		},
+	"/deploy/img/section-8/map.jpg": {
+		"ft": 16384,
+		"iS": 94954,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/section-8/map.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/deploy/index.html": {
 		"cB": 0,
 		"ft": 8192,
