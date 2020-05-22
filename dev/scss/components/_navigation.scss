@@ -1,3 +1,40 @@
 /* =============
     Navigation
 ============= */
+#nav-container {
+    ul {
+        height: 100%;
+        text-align: right;
+
+        @include md {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        li {
+            font-family: 'Jost', sans-serif;
+            font-size: rem-calc(16);
+            font-weight: 400;
+            line-height: 25px;
+            margin-bottom: 20px;
+
+            @include md {
+                align-items: center;
+                display: flex;
+                margin: 0px 30px 0 0;
+            }
+
+            a:link,
+            a:visited {
+                color: $white;
+                text-decoration: none;
+                transition: 0.25s;
+            }
+
+            a:hover,
+            a:active {
+                color: $orange;
+            }
+        }
+    }
+}

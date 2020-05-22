@@ -4,4 +4,55 @@
 header {
     background-color: $darkblue;
     color: $white;
+    position: sticky;
+    top: 0;
+
+    >div {
+        display: grid;
+        grid-template-areas:
+            "logo burger"
+            "nav nav";
+        grid-template-columns: 80% auto;
+
+        @include md {
+            grid-template-areas: "logo nav";
+            grid-template-columns: 25% auto;
+        }
+
+        #logo-container {
+            grid-area: logo;
+            padding: 20px;
+            padding-left: 50px;
+        }
+
+        #burger-container {
+            align-items: center;
+            display: flex;
+            grid-area: burger;
+            justify-content: flex-end;
+            padding: 35px;
+
+            @include md {
+                display: none !important;
+            }
+
+            i {
+                cursor: pointer;
+                font-size: rem-calc(20);
+                color: white;
+            }
+        }
+        #nav-container {
+            background-color: $blue;
+            display: none;
+            grid-area: nav;
+            padding: 20px;
+
+            @include md {
+                background-color: $darkblue;
+                display: block !important;
+            }
+        }
+
+    }
 }

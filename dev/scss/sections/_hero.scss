@@ -7,8 +7,26 @@
     background-image: url("../img/hero/hero.jpg");
 	background-position: center;
     background-size: cover;
-    height: 50vh;
     text-align: center;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50vh;
+
+    @include lg{
+        height: 60vh;
+    }
+    @include xl{
+        height: 70vh;
+    }
+
+    h1{
+        padding: 0 30px;
+
+        @include md{
+            padding: none;
+        }
+    }
 
 }
