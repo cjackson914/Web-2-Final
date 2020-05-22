@@ -30,17 +30,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/deploy/img/header/hero.jpg": {
-		"ft": 16384,
-		"iS": 1457140,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/deploy/img/header/hero.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/deploy/img/header/logo.png": {
 		"ft": 32768,
 		"iS": 2579,
@@ -50,6 +39,17 @@
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
+		"q": 100
+		},
+	"/deploy/img/hero/hero.jpg": {
+		"ft": 16384,
+		"iS": 1457140,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/deploy/img/hero/hero.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/deploy/img/section-1/visit.jpg": {
@@ -186,6 +186,14 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/dev/header.html",
+		"oF": 0
+		},
+	"/dev/hero.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/dev/hero.html",
 		"oF": 0
 		},
 	"/dev/index.kit": {
@@ -333,6 +341,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/dev/scss/layout/_header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/dev/scss/sections/_hero.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/dev/scss/sections/_hero.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

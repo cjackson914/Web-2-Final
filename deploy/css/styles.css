@@ -317,6 +317,17 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style: none; }
+
+a {
+  text-decoration: none;
+  transition: 0.25s;
+  display: inline-block; }
+
 /* =============
     Typography
 ============= */
@@ -344,9 +355,45 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  background-color: #38587C;
+  color: #fff; }
+
 /* =============
     Footer
 ============= */
 /* =============
+    Hero
+============= */
+#hero {
+  background-image: url("../img/hero/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  text-align: center;
+  color: white; }
+
+/* =============
     Section 1
+============= */
+/* =============
+    Section 2
+============= */
+/* =============
+    Section 3
+============= */
+/* =============
+    Section 4
+============= */
+/* =============
+    Section 5
+============= */
+/* =============
+    Section 6
+============= */
+/* =============
+    Section 7
+============= */
+/* =============
+    Section 8
 ============= */
