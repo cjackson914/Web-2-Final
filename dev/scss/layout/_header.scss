@@ -7,22 +7,27 @@ header {
     position: sticky;
     top: 0;
 
+
     >div {
         display: grid;
         grid-template-areas:
             "logo burger"
             "nav nav";
-        grid-template-columns: 80% auto;
+        grid-template-columns: 50% auto;
 
         @include md {
-            grid-template-areas: "logo nav";
-            grid-template-columns: 25% auto;
+            grid-template-areas: "nav";
+            grid-template-columns: auto;
         }
 
         #logo-container {
             grid-area: logo;
-            padding: 20px;
-            padding-left: 50px;
+            padding: 15px 0px 15px 35px;
+            img{
+                height: 60px;
+                width: auto;
+            }
+
         }
 
         #burger-container {
@@ -30,7 +35,7 @@ header {
             display: flex;
             grid-area: burger;
             justify-content: flex-end;
-            padding: 35px;
+            padding-right: 35px;
 
             @include md {
                 display: none !important;
@@ -38,7 +43,7 @@ header {
 
             i {
                 cursor: pointer;
-                font-size: rem-calc(20);
+                font-size: rem-calc(30);
                 color: white;
             }
         }
@@ -46,7 +51,7 @@ header {
             background-color: $blue;
             display: none;
             grid-area: nav;
-            padding: 20px;
+            padding: 15px;
 
             @include md {
                 background-color: $darkblue;

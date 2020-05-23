@@ -328,6 +328,26 @@ a {
   transition: 0.25s;
   display: inline-block; }
 
+@media (min-width: 768px) {
+  .show-for-sm {
+    display: none; } }
+
+.show-for-md {
+  display: none; }
+  @media (min-width: 768px) {
+    .show-for-md {
+      display: block; } }
+.content-spacing {
+  margin-top: 50px; }
+  @media (min-width: 768px) {
+    .content-spacing {
+      margin-top: 75px; } }
+  @media (min-width: 992px) {
+    .content-spacing {
+      margin-top: 100px; } }
+  @media (min-width: 1200px) {
+    .content-spacing {
+      margin-top: 100px; } }
 /* =============
     Typography
 ============= */
@@ -441,18 +461,21 @@ textarea {
   @media (min-width: 768px) {
     #nav-container ul {
       display: flex;
-      justify-content: flex-end; } }
+      justify-content: center; } }
   #nav-container ul li {
     font-family: 'Jost', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 25px;
     margin-bottom: 20px; }
+    #nav-container ul li img {
+      height: 60px;
+      width: 60px; }
     @media (min-width: 768px) {
       #nav-container ul li {
         align-items: center;
         display: flex;
-        margin: 0px 30px 0 0; } }
+        margin: 0px 15px 0 15px; } }
     #nav-container ul li a:link,
     #nav-container ul li a:visited {
       color: #fff;
@@ -473,33 +496,35 @@ header {
   header > div {
     display: grid;
     grid-template-areas: "logo burger" "nav nav";
-    grid-template-columns: 80% auto; }
+    grid-template-columns: 50% auto; }
     @media (min-width: 768px) {
       header > div {
-        grid-template-areas: "logo nav";
-        grid-template-columns: 25% auto; } }
+        grid-template-areas: "nav";
+        grid-template-columns: auto; } }
     header > div #logo-container {
       grid-area: logo;
-      padding: 20px;
-      padding-left: 50px; }
+      padding: 15px 0px 15px 35px; }
+      header > div #logo-container img {
+        height: 60px;
+        width: auto; }
     header > div #burger-container {
       align-items: center;
       display: flex;
       grid-area: burger;
       justify-content: flex-end;
-      padding: 35px; }
+      padding-right: 35px; }
       @media (min-width: 768px) {
         header > div #burger-container {
           display: none !important; } }
       header > div #burger-container i {
         cursor: pointer;
-        font-size: 1.25rem;
+        font-size: 1.875rem;
         color: white; }
     header > div #nav-container {
       background-color: #608AB9;
       display: none;
       grid-area: nav;
-      padding: 20px; }
+      padding: 15px; }
       @media (min-width: 768px) {
         header > div #nav-container {
           background-color: #38587C;
@@ -533,9 +558,83 @@ header {
 /* =============
     Section 1
 ============= */
+@media (min-width: 992px) {
+  #section-1 {
+    display: grid;
+    grid-template-areas: "photo text";
+    grid-template-columns: 60% auto; } }
+
+@media (min-width: 768px) {
+  #section-1 #section-1-container-text {
+    display: grid;
+    grid-template-areas: ". text";
+    grid-template-columns: auto 75%; } }
+
+@media (min-width: 992px) {
+  #section-1 #section-1-container-text {
+    grid-template-areas: "text";
+    grid-template-columns: 100%; } }
+
+#section-1 #section-1-text {
+  grid-area: text;
+  margin: 0 10px; }
+  @media (min-width: 768px) {
+    #section-1 #section-1-text {
+      margin: 0 10px 0 0; } }
+  #section-1 #section-1-text h2 {
+    color: #38587C;
+    padding-bottom: 22px; }
+  #section-1 #section-1-text p {
+    padding-bottom: 22px; }
+
+@media (min-width: 768px) {
+  #section-1 #section-1-container-photo {
+    display: grid;
+    grid-template-areas: "photo .";
+    grid-template-columns: 75% auto; } }
+
+@media (min-width: 992px) {
+  #section-1 #section-1-container-photo {
+    grid-template-areas: "photo";
+    grid-template-columns: 100%; } }
+
+#section-1 aside {
+  grid-area: photo;
+  background-image: url("../img/section-1/visit.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  height: 40vh; }
+  @media (min-width: 768px) {
+    #section-1 aside {
+      height: 60vh; } }
+  @media (min-width: 992px) {
+    #section-1 aside {
+      height: auto; } }
 /* =============
     Section 2
 ============= */
+#section-2 {
+  background-color: #F4F4F4;
+  padding: 30px 10px;
+  text-align: justify; }
+  @media (min-width: 768px) {
+    #section-2 {
+      display: grid;
+      grid-template-areas: "text .";
+      padding: 40px 10px;
+      grid-template-columns: 75% auto; } }
+  @media (min-width: 992px) {
+    #section-2 {
+      grid-template-areas: ". text .";
+      grid-template-columns: auto 83% auto; } }
+  @media (min-width: 1200px) {
+    #section-2 {
+      grid-template-areas: ". text .";
+      grid-template-columns: auto 940px auto; } }
+  #section-2 h3 {
+    grid-area: text; }
+
 /* =============
     Section 3
 ============= */
@@ -545,12 +644,64 @@ header {
 /* =============
     Section 5
 ============= */
+#section-5 {
+  background-color: #F4F4F4;
+  padding: 30px 10px;
+  text-align: justify; }
+  @media (min-width: 768px) {
+    #section-5 {
+      display: grid;
+      grid-template-areas: ". text";
+      padding: 40px 10px;
+      grid-template-columns: auto 75%; } }
+  @media (min-width: 992px) {
+    #section-5 {
+      grid-template-areas: ". text .";
+      grid-template-columns: auto 83% auto; } }
+  @media (min-width: 1200px) {
+    #section-5 {
+      grid-template-areas: ". text .";
+      grid-template-columns: auto 940px auto; } }
+  #section-5 h3 {
+    grid-area: text; }
+
 /* =============
     Section 6
 ============= */
+#section-6 {
+  background-image: url("../img/section-6/icecream.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  height: 260px; }
+  @media (min-width: 768px) {
+    #section-6 {
+      height: 436px; } }
+  @media (min-width: 992px) {
+    #section-6 {
+      height: 519px; } }
+  @media (min-width: 1200px) {
+    #section-6 {
+      height: 643px; } }
 /* =============
     Section 7
 ============= */
 /* =============
     Section 8
 ============= */
+#section-8 {
+  background-color: #5B9A9F; }
+  #section-8 #section-8-container {
+    margin: 0 10px;
+    padding: 32px 0; }
+  #section-8 #section-1-text {
+    grid-area: text; }
+    #section-8 #section-1-text h2 {
+      padding-bottom: 22px;
+      color: #fff !important; }
+    #section-8 #section-1-text p {
+      padding-bottom: 22px; }
+  #section-8 aside {
+    background-image: url("../img/section-8/map.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    height: 60vh; }

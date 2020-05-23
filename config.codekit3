@@ -19,17 +19,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/deploy/img/footer/logo.png": {
-		"ft": 32768,
-		"iS": 2188,
-		"oA": 0,
-		"oAP": "/deploy/img/footer/logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/deploy/img/header/logo.png": {
 		"ft": 32768,
 		"iS": 2579,

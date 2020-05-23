@@ -1,3 +1,32 @@
 /* =============
     Section 2
 ============= */
+
+#section-2{
+    background-color: $lightgray;
+
+    padding: 30px 10px;
+    text-align: justify;
+
+    @include md{
+        display: grid;
+        grid-template-areas: "text .";
+        padding: 40px 10px;
+        grid-template-columns: 75% auto;
+    }
+
+    @include lg{
+        grid-template-areas: ". text .";
+        grid-template-columns: auto 83% auto;
+    }
+
+    @include xl{
+        grid-template-areas: ". text .";
+        grid-template-columns: auto 940px auto;
+    }
+
+
+    h3{
+        grid-area: text;
+    }
+}

@@ -3,5 +3,71 @@
 ============= */
 #section-1{
 
+    @include lg{
+        display: grid;
+        grid-template-areas: "photo text";
+        grid-template-columns: 60% auto;
+    }
 
+    #section-1-container-text {
+
+        @include md{
+            display: grid;
+            grid-template-areas: ". text";
+            grid-template-columns: auto 75%;
+        }
+        @include lg{
+            grid-template-areas: "text";
+            grid-template-columns: 100%;
+        }
+    }
+
+    #section-1-text{
+        grid-area: text;
+        margin: 0 10px;
+
+        @include md{
+            margin: 0 10px 0 0;
+        }
+
+        h2{
+            color: $darkblue;
+            padding-bottom: 22px;
+        }
+
+        p{
+            padding-bottom: 22px;
+        }
+    }
+
+    #section-1-container-photo{
+        @include md{
+            display: grid;
+            grid-template-areas: "photo .";
+            grid-template-columns: 75% auto;
+        }
+        @include lg{
+            grid-template-areas: "photo";
+            grid-template-columns: 100%;
+        }
+    }
+
+    aside{
+        grid-area: photo;
+        background-image: url("../img/section-1/visit.jpg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 120%;
+        height: 40vh;
+
+        @include md{
+            height: 60vh;
+        }
+
+        @include lg{
+            height: auto;
+        }
+    }
+
+            
 }
