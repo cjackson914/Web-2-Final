@@ -430,7 +430,7 @@ h5 {
   font-family: 'Jost', sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
-  color: #ED9C4B;
+  color: #fff;
   margin: 0;
   padding: 0; }
 
@@ -685,6 +685,84 @@ header {
 /* =============
     Section 7
 ============= */
+#section-7 {
+  display: grid;
+  grid-template-areas: ". section-7 .";
+  grid-template-columns: 10px auto 10px;
+  padding: 20px 0px; }
+  @media (min-width: 1200px) {
+    #section-7 {
+      display: grid;
+      grid-template-areas: ". section-7 .";
+      grid-template-columns: auto 1200px auto; } }
+  #section-7 #cards {
+    grid-area: section-7; }
+    #section-7 #cards ul {
+      display: grid;
+      gap: 20px; }
+      @media (min-width: 768px) {
+        #section-7 #cards ul {
+          display: grid;
+          grid-template-areas: "c1 c1 c2 c2" ". c3 c3 .";
+          grid-template-columns: repeat(4, 1fr); } }
+      @media (min-width: 992px) {
+        #section-7 #cards ul {
+          grid-template-areas: "c1 c2 c3";
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px; } }
+      #section-7 #cards ul li div {
+        background-size: cover;
+        height: 225px; }
+      #section-7 #cards ul li section {
+        padding: 20px; }
+        @media (min-width: 992px) {
+          #section-7 #cards ul li section {
+            padding: 24px; } }
+        #section-7 #cards ul li section h4 {
+          text-align: center; }
+        #section-7 #cards ul li section p {
+          margin: 20px 0;
+          text-align: justify; }
+      @media (min-width: 768px) {
+        #section-7 #cards ul #card-1 {
+          grid-area: c1; } }
+      #section-7 #cards ul #card-1 div {
+        background-image: url("../img/section-7/concert.jpg"); }
+      @media (min-width: 768px) {
+        #section-7 #cards ul #card-2 {
+          grid-area: c2; } }
+      #section-7 #cards ul #card-2 div {
+        background-image: url("../img/section-7/art.jpg"); }
+      @media (min-width: 768px) {
+        #section-7 #cards ul #card-3 {
+          grid-area: c3; } }
+      #section-7 #cards ul #card-3 div {
+        background-image: url("../img/section-7/skating.jpg");
+        position: center bottom; }
+  #section-7 a:link,
+  #section-7 a:visited {
+    align-items: center;
+    background-color: #ED9C4B;
+    border-radius: 100px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 60px;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 22px; }
+    #section-7 a:link x
+h5,
+    #section-7 a:visited x
+h5 {
+      color: #fff; }
+  #section-7 a:hover,
+  #section-7 a:active {
+    background-color: #C66E16; }
+    #section-7 a:hover h5,
+    #section-7 a:active h5 {
+      color: #fff; }
+
 /* =============
     Section 8
 ============= */
@@ -699,9 +777,10 @@ header {
       padding-bottom: 22px;
       color: #fff !important; }
     #section-8 #section-1-text p {
-      padding-bottom: 22px; }
+      padding-bottom: 22px;
+      color: #fff !important; }
   #section-8 aside {
     background-image: url("../img/section-8/map.jpg");
-    background-position: center bottom;
+    background-position: center;
     background-size: cover;
-    height: 60vh; }
+    height: 300px; }

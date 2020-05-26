@@ -21,14 +21,15 @@
 
         p{
             padding-bottom: 22px;
+            color: $white !important;
         }
     }
 
 
     aside{
         background-image: url("../img/section-8/map.jpg");
-        background-position: center bottom;
+        background-position: center;
         background-size: cover;
-        height: 60vh;
+        height: 300px;
     }
 }

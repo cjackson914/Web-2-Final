@@ -1,3 +1,125 @@
 /* =============
     Section 7
 ============= */
+#section-7{
+
+	display: grid;
+	grid-template-areas: ". section-7 .";
+    grid-template-columns: 10px auto 10px;
+    padding: 20px 0px;
+    // padding: 44px 0 32px;
+
+    // @include lg{
+    //     padding: 0 40px;
+    // } 
+
+    @include xl {
+		display: grid;
+		grid-template-areas: ". section-7 .";
+		grid-template-columns: auto 1200px auto;
+	}
+
+    // @include md {
+    //     grid-template-columns: auto 80% auto;
+    //     padding: 32px 0 40px;
+    // }
+    // @include lg{
+    //     padding: 70px 0;
+    // }
+	// @include xl {
+    //     grid-template-columns: auto 1200px auto;
+    //     padding: 100px 0 80px;
+    // }
+
+    #cards {
+        grid-area: section-7;
+        
+        ul {
+            display: grid;
+            gap: 20px;
+            @include md {
+                display: grid;
+                grid-template-areas: 
+                "c1 c1 c2 c2"
+                    ". c3 c3 .";
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @include lg {
+                grid-template-areas: "c1 c2 c3";
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            li {
+                div {
+                    background-size: cover;
+                    height: 225px;
+                }
+                section {
+                    padding: 20px;
+                    @include lg {
+                        padding: 24px;
+                    }
+                    h4 {
+                        text-align: center;
+                    }
+                    p {
+                        margin: 20px 0;
+                        text-align: justify;
+                    }
+                }
+            }
+            #card-1 {
+                @include md {
+                    grid-area: c1;
+                }
+                div {
+                    background-image: url("../img/section-7/concert.jpg");
+                }
+            }
+            #card-2 {
+                @include md {
+                    grid-area: c2;
+                }
+                div {
+                    background-image: url("../img/section-7/art.jpg");
+                }
+            }
+            #card-3 {
+                @include md {
+                    grid-area: c3;
+                }
+                div {
+                    background-image: url("../img/section-7/skating.jpg");
+                    position: center bottom;
+                }
+            }
+        }
+    }
+
+    a:link,
+        a:visited {
+			align-items: center;
+            background-color: $orange;
+			border-radius: 100px;
+			display: flex;
+			height: 30px;
+			justify-content: center;
+            width: 60px;
+            text-align: center;
+            margin-left: 40%;
+            margin-top: 22px;x
+
+			h5 {
+                color: $white;
+
+			}
+		}
+		a:hover,
+        a:active {
+			background-color: $darkorange;
+			h5 {
+				color: $white;
+			}
+        }
+}
+

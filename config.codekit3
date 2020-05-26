@@ -19,6 +19,17 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/deploy/img/footer/logo.png": {
+		"ft": 32768,
+		"iS": 2228,
+		"oA": 0,
+		"oAP": "/deploy/img/footer/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/deploy/img/header/logo.png": {
 		"ft": 32768,
 		"iS": 2579,
@@ -52,13 +63,16 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/deploy/img/section-3/boardwalk": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
+	"/deploy/img/section-3/boardwalk.jpg": {
+		"ft": 16384,
+		"iS": 214917,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "/deploy/img/section-3/boardwalk",
-		"oF": 0
+		"oAP": "/deploy/img/section-3/boardwalk.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/deploy/img/section-3/hammocks.jpg": {
 		"ft": 16384,
@@ -126,13 +140,16 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/deploy/img/section-7/skating": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
+	"/deploy/img/section-7/skating.jpg": {
+		"ft": 16384,
+		"iS": 138935,
+		"jF": 0,
 		"oA": 0,
-		"oAP": "/deploy/img/section-7/skating",
-		"oF": 0
+		"oAP": "/deploy/img/section-7/skating.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/deploy/img/section-8/map.jpg": {
 		"ft": 16384,
