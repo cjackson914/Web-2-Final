@@ -5,14 +5,14 @@
 
     @include lg{
         display: grid;
-        grid-template-areas: "photo text";
+        grid-template-areas: "video text";
         grid-template-columns: 60% auto;
         gap: 20px;
     }
 
     @include xl{
         display: grid;
-        grid-template-areas: ". photo text .";
+        grid-template-areas: ". video text .";
         grid-template-columns: auto 720px 480px auto;
         gap: 20px;
     }
@@ -58,10 +58,10 @@
         }
     }
 
-    #section-1-container-photo{
+    #section-1-container-video{
         @include md{
             display: grid;
-            grid-template-areas: "photo .";
+            grid-template-areas: "video .";
             grid-template-columns: 75% auto;
         }
         @include lg{
@@ -69,24 +69,38 @@
             // grid-template-areas: "photo";
             // grid-template-columns: 100%;
         }
-    }
+        section{
+            grid-area: video;
+            height: 35vh;
 
-    aside{
-        grid-area: photo;
-        background-image: url("../img/section-1/visit.jpg");
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: 120%;
-        height: 40vh;
+            @include md{
+                // height: 50vh;
+                height: 315px;
+                width: 560;
+            }
 
-        @include md{
-            height: 50vh;
-        }
-
-        @include lg{
-            height: 100%;
+            @include lg{
+                height: 100%;
+            }
         }
     }
+
+    // aside{
+    //     grid-area: video;
+    //     background-image: url("../img/section-1/visit.jpg");
+    //     background-position: center bottom;
+    //     background-repeat: no-repeat;
+    //     background-size: 120%;
+    //     height: 40vh;
+
+    //     @include md{
+    //         height: 50vh;
+    //     }
+
+    //     @include lg{
+    //         height: 100%;
+    //     }
+    // }
 
             
 }
