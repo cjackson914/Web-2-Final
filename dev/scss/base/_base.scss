@@ -25,7 +25,7 @@ a{
 .show-for-md {
     display: none;
     @include md{
-        display: block;
+        display: contents;
     }
 }
 

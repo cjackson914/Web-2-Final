@@ -6,12 +6,42 @@
     background-color: $teal;
 
 
-    #section-8-container{
-        margin: 0 10px;
-        padding: 32px 0;
+    @include xl{
+        display: grid;
+        grid-template-areas: ". container .";
+        grid-template-columns: auto 1200px auto;
     }
 
-    #section-1-text{
+
+    #section-8-container{
+        grid-area: container;
+        margin: 0 10px;
+        padding: 32px 0px;
+
+        @include md{
+            display: grid;
+            grid-template-areas: "text photo";
+            grid-template-columns: 62.5% auto;
+            gap: 20px;
+        }
+
+        @include lg{
+            grid-template-areas: "text photo";
+            grid-template-columns: 60% auto;
+            gap: 20px;
+            margin: 0px 96px;
+        }
+
+        // @include xl{
+        //     grid-template-areas: "text photo";
+        //     grid-template-columns: 62.5% auto;
+        //     gap: 20px;
+        //     margin: 0px;
+        // }
+
+    }
+
+    #section-8-text{
         grid-area: text;
 
         h2{
@@ -22,14 +52,20 @@
         p{
             padding-bottom: 22px;
             color: $white !important;
+            text-align: justify;
         }
     }
 
 
     aside{
+        grid-area: photo;
         background-image: url("../img/section-8/map.jpg");
         background-position: center;
         background-size: cover;
         height: 300px;
+
+        @include md{
+            height: 100%;
+        }
     }
 }

@@ -1,3 +1,80 @@
 /* =============
     Section 3
 ============= */
+#section-3{
+
+
+
+    #gallery{
+
+        ul{
+
+            li{
+                padding: 25px 0; //move to individual gallery items later//
+                div{
+                    height: 271px;
+                    background-size: cover;
+                }
+
+                .section-3-text{
+                    padding-top: 32px;
+
+                    h4 {
+                        padding-bottom: 22px;
+                    }                   
+
+                    p{
+                        text-align: justify;
+                        padding-bottom: 22px;
+                    }
+
+                }
+            }
+
+            #gallery-1{
+                div{
+                    background-image: url("../img/section-3/hammocks.jpg/");
+                }
+            }
+
+            #gallery-2{
+                div{
+                    background-image: url("../img/section-3/oasis.jpg/");
+                }
+            }
+
+            #gallery-3{
+                div{
+                    background-image: url("../img/section-3/boardwalk.jpg/");
+                }
+            }
+
+        }
+
+    }
+
+    .more-button{
+        // text-align: center;
+    }
+
+    a:link,
+        a:visited {
+            background-color: $orange;
+			border-radius: 100px;
+            padding: 10px 20px;
+
+			h5 {
+                color: $white;
+                display: inline-block;
+
+			}
+		}
+		a:hover,
+        a:active {
+			background-color: $darkorange;
+			h5 {
+				color: $white;
+			}
+        }
+
+}
