@@ -1,3 +1,99 @@
 /* =============
     Footer
 ============= */
+footer{
+    background-color: $darkblue;
+    color: $white;
+
+    @include lg{
+        display: grid;
+        grid-template-areas: ". content .";
+        grid-template-columns: auto 720px auto;
+    }
+
+    @include xl{
+        grid-template-columns: auto 940px auto;
+    }
+
+    #footer-container{
+        grid-area: content;
+        display: grid;
+        grid-template-areas: "logo social";
+        grid-template-columns: 50% auto;
+
+        @include md{
+            grid-template-areas: "social logo address"
+            "phone logo address";
+            grid-template-columns: auto 25% auto;
+            margin: 0 10px;
+        }
+    }
+
+    #footer-logo-container {
+        grid-area: logo;
+        padding: 15px 0px 15px 35px;
+
+        @include md {
+            padding: 15px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            height: 60px;
+            width: auto;
+        }
+
+    }
+
+    ul{
+        grid-area: social;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: white;
+        padding-right: 35px;
+
+        @include md{
+            padding-right: 0;
+            justify-content: flex-start;
+        }
+
+        li {
+            font-size: rem-calc(30);
+            padding: 0px 10px;
+
+            a:link,
+            a:visited {
+                color: $white;
+                text-decoration: none;
+                transition: 0.25s;
+            }
+
+            a:hover,
+            a:active {
+                color: $orange;
+            }
+        }
+    }
+
+    p{
+        color:white;
+    }
+
+    #footer-phone{
+        grid-area: phone;
+        padding-left: 10px
+    }
+
+    #footer-address{
+        grid-area: address;
+        text-align: right;
+        padding: 15px 0;
+    }
+
+    
+
+
+
+}

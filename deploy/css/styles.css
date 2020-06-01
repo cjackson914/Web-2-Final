@@ -518,10 +518,10 @@ header {
       header > div {
         grid-template-areas: "nav";
         grid-template-columns: auto; } }
-    header > div #logo-container {
+    header > div #header-logo-container {
       grid-area: logo;
       padding: 15px 0px 15px 35px; }
-      header > div #logo-container img {
+      header > div #header-logo-container img {
         height: 60px;
         width: auto; }
     header > div #burger-container {
@@ -549,6 +549,71 @@ header {
 /* =============
     Footer
 ============= */
+footer {
+  background-color: #38587C;
+  color: #fff; }
+  @media (min-width: 992px) {
+    footer {
+      display: grid;
+      grid-template-areas: ". content .";
+      grid-template-columns: auto 720px auto; } }
+  @media (min-width: 1200px) {
+    footer {
+      grid-template-columns: auto 940px auto; } }
+  footer #footer-container {
+    grid-area: content;
+    display: grid;
+    grid-template-areas: "logo social";
+    grid-template-columns: 50% auto; }
+    @media (min-width: 768px) {
+      footer #footer-container {
+        grid-template-areas: "social logo address" "phone logo address";
+        grid-template-columns: auto 25% auto;
+        margin: 0 10px; } }
+  footer #footer-logo-container {
+    grid-area: logo;
+    padding: 15px 0px 15px 35px; }
+    @media (min-width: 768px) {
+      footer #footer-logo-container {
+        padding: 15px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center; } }
+    footer #footer-logo-container img {
+      height: 60px;
+      width: auto; }
+  footer ul {
+    grid-area: social;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    padding-right: 35px; }
+    @media (min-width: 768px) {
+      footer ul {
+        padding-right: 0;
+        justify-content: flex-start; } }
+    footer ul li {
+      font-size: 1.875rem;
+      padding: 0px 10px; }
+      footer ul li a:link,
+      footer ul li a:visited {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.25s; }
+      footer ul li a:hover,
+      footer ul li a:active {
+        color: #ED9C4B; }
+  footer p {
+    color: white; }
+  footer #footer-phone {
+    grid-area: phone;
+    padding-left: 10px; }
+  footer #footer-address {
+    grid-area: address;
+    text-align: right;
+    padding: 15px 0; }
+
 /* =============
     Hero
 ============= */
