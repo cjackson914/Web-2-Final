@@ -32,16 +32,20 @@ footer{
     #footer-logo-container {
         grid-area: logo;
         padding: 15px 0px 15px 35px;
+        display: flex;
+        align-items: center;
 
         @include md {
             padding: 15px 0px;
-            display: flex;
-            align-items: center;
             justify-content: center;
         }
         img{
             height: 60px;
             width: auto;
+
+            @include md{
+                height: 80px;
+            }
         }
 
     }
@@ -54,9 +58,15 @@ footer{
         color: white;
         padding-right: 35px;
 
+        li:first-child{
+            padding-left: 0px;
+        }
+
         @include md{
             padding-right: 0;
             justify-content: flex-start;
+            align-items: flex-end;
+            padding-bottom: 5px;
         }
 
         li {
@@ -82,14 +92,22 @@ footer{
     }
 
     #footer-phone{
-        grid-area: phone;
-        padding-left: 10px
+        
+
+        @include md{
+            grid-area: phone;
+            padding-top: 5px;
+        }
     }
 
     #footer-address{
-        grid-area: address;
-        text-align: right;
-        padding: 15px 0;
+
+        @include md{
+            grid-area: address;
+            text-align: right;
+            padding: 15px 0;
+        }
+        
     }
 
     

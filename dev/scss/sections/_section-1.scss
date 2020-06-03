@@ -65,18 +65,19 @@
             grid-template-columns: 75% auto;
         }
         @include lg{
-            display: contents;
+            display: block;
             // grid-template-areas: "photo";
             // grid-template-columns: 100%;
         }
         section{
             grid-area: video;
             height: 35vh;
+            width: 100%;
 
             @include md{
-                // height: 50vh;
-                height: 315px;
-                width: 560;
+                // height: 30vh;
+                // height: 100%;
+                // width: 560;
             }
 
             @include lg{

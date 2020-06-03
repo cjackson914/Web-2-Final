@@ -7,6 +7,7 @@
 	grid-template-areas: ". section-7 .";
     grid-template-columns: 10px auto 10px;
     padding: 20px 0px;
+    text-align: justify;
     // padding: 44px 0 32px;
 
     // @include lg{
@@ -71,6 +72,8 @@
                 div {
                     background-image: url("../img/section-7/art.jpg");
                 }
+
+                
             }
             #card-3 {
                 @include md {

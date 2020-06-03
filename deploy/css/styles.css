@@ -336,7 +336,7 @@ a {
   display: none; }
   @media (min-width: 768px) {
     .show-for-md {
-      display: contents; } }
+      display: inline; } }
 .content-spacing {
   margin-top: 50px; }
   @media (min-width: 768px) {
@@ -490,6 +490,9 @@ textarea {
 =================== */
 .video-wrapper {
   position: relative;
+  padding-bottom: 75%;
+  /* 4:6 */
+  padding-top: 25px;
   height: 0; }
 
 .video-wrapper iframe {
@@ -498,6 +501,10 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%; }
+
+.widescreen {
+  padding-bottom: 56.25%;
+  /* 16:9 */ }
 
 /* ===================
     End Video Player
@@ -509,7 +516,8 @@ header {
   background-color: #38587C;
   color: #fff;
   position: sticky;
-  top: 0; }
+  top: 0;
+  z-index: 1000; }
   header > div {
     display: grid;
     grid-template-areas: "logo burger" "nav nav";
@@ -572,16 +580,19 @@ footer {
         margin: 0 10px; } }
   footer #footer-logo-container {
     grid-area: logo;
-    padding: 15px 0px 15px 35px; }
+    padding: 15px 0px 15px 35px;
+    display: flex;
+    align-items: center; }
     @media (min-width: 768px) {
       footer #footer-logo-container {
         padding: 15px 0px;
-        display: flex;
-        align-items: center;
         justify-content: center; } }
     footer #footer-logo-container img {
       height: 60px;
       width: auto; }
+      @media (min-width: 768px) {
+        footer #footer-logo-container img {
+          height: 80px; } }
   footer ul {
     grid-area: social;
     display: flex;
@@ -589,10 +600,14 @@ footer {
     align-items: center;
     color: white;
     padding-right: 35px; }
+    footer ul li:first-child {
+      padding-left: 0px; }
     @media (min-width: 768px) {
       footer ul {
         padding-right: 0;
-        justify-content: flex-start; } }
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-bottom: 5px; } }
     footer ul li {
       font-size: 1.875rem;
       padding: 0px 10px; }
@@ -606,14 +621,15 @@ footer {
         color: #ED9C4B; }
   footer p {
     color: white; }
-  footer #footer-phone {
-    grid-area: phone;
-    padding-left: 10px; }
-  footer #footer-address {
-    grid-area: address;
-    text-align: right;
-    padding: 15px 0; }
-
+  @media (min-width: 768px) {
+    footer #footer-phone {
+      grid-area: phone;
+      padding-top: 5px; } }
+  @media (min-width: 768px) {
+    footer #footer-address {
+      grid-area: address;
+      text-align: right;
+      padding: 15px 0; } }
 /* =============
     Hero
 ============= */
@@ -625,13 +641,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh; }
+  height: 40vh; }
   @media (min-width: 992px) {
     #hero {
       height: 60vh; } }
   @media (min-width: 1200px) {
     #hero {
-      height: 70vh; } }
+      height: 60vh; } }
   #hero h1 {
     padding: 0 30px; }
     @media (min-width: 768px) {
@@ -691,15 +707,12 @@ footer {
 
 @media (min-width: 992px) {
   #section-1 #section-1-container-video {
-    display: contents; } }
+    display: block; } }
 
 #section-1 #section-1-container-video section {
   grid-area: video;
-  height: 35vh; }
-  @media (min-width: 768px) {
-    #section-1 #section-1-container-video section {
-      height: 315px;
-      width: 560; } }
+  height: 35vh;
+  width: 100%; }
   @media (min-width: 992px) {
     #section-1 #section-1-container-video section {
       height: 100%; } }
@@ -740,17 +753,38 @@ footer {
     #section-3 #gallery ul li .section-3-text h4 {
       padding-bottom: 22px; }
     #section-3 #gallery ul li .section-3-text p {
-      text-align: justify;
       padding-bottom: 22px; }
 
-#section-3 #gallery ul #gallery-1 div {
-  background-image: url("../img/section-3/hammocks.jpg/"); }
+#section-3 #gallery ul #gallery-1 {
+  display: grid;
+  grid-template-areas: ". gallery-1";
+  grid-template-columns: auto 75%; }
+  #section-3 #gallery ul #gallery-1 #gallery-1-content {
+    grid-area: gallery-1;
+    padding: 0 10px; }
+    #section-3 #gallery ul #gallery-1 #gallery-1-content div {
+      background-image: url("../img/section-3/hammocks.jpg/"); }
 
-#section-3 #gallery ul #gallery-2 div {
-  background-image: url("../img/section-3/oasis.jpg/"); }
+#section-3 #gallery ul #gallery-2 {
+  background-color: #F4F4F4;
+  display: grid;
+  grid-template-areas: "gallery-2 .";
+  grid-template-columns: 75% auto; }
+  #section-3 #gallery ul #gallery-2 #gallery-2-content {
+    grid-area: gallery-2;
+    padding: 0 10px; }
+    #section-3 #gallery ul #gallery-2 #gallery-2-content div {
+      background-image: url("../img/section-3/oasis.jpg/"); }
 
-#section-3 #gallery ul #gallery-3 div {
-  background-image: url("../img/section-3/boardwalk.jpg/"); }
+#section-3 #gallery ul #gallery-3 {
+  display: grid;
+  grid-template-areas: ". gallery-3";
+  grid-template-columns: auto 75%; }
+  #section-3 #gallery ul #gallery-3 #gallery-3-content {
+    grid-area: gallery-3;
+    padding: 0 10px; }
+    #section-3 #gallery ul #gallery-3 #gallery-3-content div {
+      background-image: url("../img/section-3/boardwalk.jpg/"); }
 
 #section-3 a:link,
 #section-3 a:visited {
@@ -859,7 +893,8 @@ footer {
   display: grid;
   grid-template-areas: ". section-7 .";
   grid-template-columns: 10px auto 10px;
-  padding: 20px 0px; }
+  padding: 20px 0px;
+  text-align: justify; }
   @media (min-width: 1200px) {
     #section-7 {
       display: grid;

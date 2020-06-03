@@ -24,7 +24,7 @@
                     }                   
 
                     p{
-                        text-align: justify;
+                        // text-align: justify;
                         padding-bottom: 22px;
                     }
 
@@ -32,20 +32,48 @@
             }
 
             #gallery-1{
-                div{
-                    background-image: url("../img/section-3/hammocks.jpg/");
+                display: grid;
+                grid-template-areas: ". gallery-1";
+                grid-template-columns: auto 75%;
+
+                    #gallery-1-content{
+                        grid-area: gallery-1;
+                        padding: 0 10px;
+
+                        div{
+                            background-image: url("../img/section-3/hammocks.jpg/");
+                        }
                 }
             }
 
             #gallery-2{
-                div{
-                    background-image: url("../img/section-3/oasis.jpg/");
+                background-color: $lightgray;
+                display: grid;
+                grid-template-areas: "gallery-2 .";
+                grid-template-columns: 75% auto;
+
+                #gallery-2-content{
+                    grid-area: gallery-2;
+                    padding: 0 10px;
+
+                    div{
+                        background-image: url("../img/section-3/oasis.jpg/");
+                    }
                 }
             }
 
             #gallery-3{
-                div{
-                    background-image: url("../img/section-3/boardwalk.jpg/");
+                display: grid;
+                grid-template-areas: ". gallery-3";
+                grid-template-columns: auto 75%;
+
+                #gallery-3-content{
+                    grid-area: gallery-3;
+                    padding: 0 10px;
+
+                    div{
+                        background-image: url("../img/section-3/boardwalk.jpg/");
+                    }
                 }
             }
 
