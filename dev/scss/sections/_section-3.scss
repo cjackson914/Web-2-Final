@@ -66,6 +66,10 @@
                             background-image: url("../img/section-3/hammocks.jpg/");
                             background-position: center;
                             grid-area: g1-image;
+
+                            @include md{
+                                height: 100%;
+                            }
                         }
 
                         #gallery-1-text{
@@ -87,33 +91,101 @@
 
             #gallery-2{
                 background-color: $lightgray;
-                display: grid;
-                grid-template-areas: "gallery-2 .";
-                grid-template-columns: 75% auto;
 
                 #gallery-2-content{
-                    grid-area: gallery-2;
+                    // grid-area: gallery-1;
                     padding: 0 10px;
+                    display: grid;
+                    grid-template-areas: "g2-image ."
+                    "g2-text .";
+                    grid-template-columns: 75% auto;
 
-                    div{
-                        background-image: url("../img/section-3/oasis.jpg/");
+                    @include md{
+                        grid-template-columns: 3fr 5fr;
+                        grid-template-areas: "g2-image g2-text";
+                        
                     }
-                }
+
+                    @include lg{
+                        grid-template-columns: 1fr 4fr 6fr 1fr;
+                        grid-template-areas: ". g2-image g2-text .";
+                        
+                    }
+
+                    #gallery-2-image{
+                        background-image: url("../img/section-3/oasis.jpg/");
+                        background-position: center;
+                        grid-area: g2-image;
+
+                        @include md{
+                            height: 100%;
+                        }
+                    }
+
+                    #gallery-2-text{
+                        grid-area: g2-text;
+
+                        @include md{
+                            padding-left: 20px;
+                            h4{
+                                text-align: left;
+                            }
+                        }
+
+                        @include lg{
+                            padding-left: 25px;
+                        }
+                    }
+            }
             }
 
             #gallery-3{
-                display: grid;
-                grid-template-areas: ". gallery-3";
-                grid-template-columns: auto 75%;
 
                 #gallery-3-content{
-                    grid-area: gallery-3;
+                    // grid-area: gallery-1;
                     padding: 0 10px;
+                    display: grid;
+                    grid-template-areas: ". g3-image"
+                    ". g3-text";
+                    grid-template-columns: auto 75%;
 
-                    div{
-                        background-image: url("../img/section-3/boardwalk.jpg/");
+                    @include md{
+                        grid-template-columns: 2fr 3fr 3fr;
+                        grid-template-areas: ". g3-text g3-image";
+                        
                     }
-                }
+
+                    @include lg{
+                        grid-template-columns: 3fr 4fr 4fr 1fr;
+                        grid-template-areas: ". g3-text g3-image .";
+                        
+                    }
+
+                    #gallery-3-image{
+                        background-image: url("../img/section-3/boardwalk.jpg/");
+                        background-position: center;
+                        grid-area: g3-image;
+
+                        @include md{
+                            height: 100%;
+                        }
+                    }
+
+                    #gallery-3-text{
+                        grid-area: g3-text;
+
+                        @include md{
+                            padding-right: 20px;
+                            h4{
+                                text-align: right;
+                            }
+                        }
+
+                        @include lg{
+                            padding-right: 25px;
+                        }
+                    }
+            }
             }
 
         }

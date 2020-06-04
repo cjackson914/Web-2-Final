@@ -776,6 +776,9 @@ footer {
       background-image: url("../img/section-3/hammocks.jpg/");
       background-position: center;
       grid-area: g1-image; }
+      @media (min-width: 768px) {
+        #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content #gallery-1-image {
+          height: 100%; } }
     #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content #gallery-1-text {
       grid-area: g1-text; }
       @media (min-width: 768px) {
@@ -787,25 +790,67 @@ footer {
         #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content #gallery-1-text {
           padding-right: 25px; } }
   #section-3 #section-3-container #gallery ul #gallery-2 {
-    background-color: #F4F4F4;
-    display: grid;
-    grid-template-areas: "gallery-2 .";
-    grid-template-columns: 75% auto; }
+    background-color: #F4F4F4; }
     #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content {
-      grid-area: gallery-2;
-      padding: 0 10px; }
-      #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content div {
-        background-image: url("../img/section-3/oasis.jpg/"); }
-  #section-3 #section-3-container #gallery ul #gallery-3 {
+      padding: 0 10px;
+      display: grid;
+      grid-template-areas: "g2-image ." "g2-text .";
+      grid-template-columns: 75% auto; }
+      @media (min-width: 768px) {
+        #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content {
+          grid-template-columns: 3fr 5fr;
+          grid-template-areas: "g2-image g2-text"; } }
+      @media (min-width: 992px) {
+        #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content {
+          grid-template-columns: 1fr 4fr 6fr 1fr;
+          grid-template-areas: ". g2-image g2-text ."; } }
+      #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content #gallery-2-image {
+        background-image: url("../img/section-3/oasis.jpg/");
+        background-position: center;
+        grid-area: g2-image; }
+        @media (min-width: 768px) {
+          #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content #gallery-2-image {
+            height: 100%; } }
+      #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content #gallery-2-text {
+        grid-area: g2-text; }
+        @media (min-width: 768px) {
+          #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content #gallery-2-text {
+            padding-left: 20px; }
+            #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content #gallery-2-text h4 {
+              text-align: left; } }
+        @media (min-width: 992px) {
+          #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content #gallery-2-text {
+            padding-left: 25px; } }
+  #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content {
+    padding: 0 10px;
     display: grid;
-    grid-template-areas: ". gallery-3";
+    grid-template-areas: ". g3-image" ". g3-text";
     grid-template-columns: auto 75%; }
-    #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content {
-      grid-area: gallery-3;
-      padding: 0 10px; }
-      #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content div {
-        background-image: url("../img/section-3/boardwalk.jpg/"); }
-
+    @media (min-width: 768px) {
+      #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content {
+        grid-template-columns: 2fr 3fr 3fr;
+        grid-template-areas: ". g3-text g3-image"; } }
+    @media (min-width: 992px) {
+      #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content {
+        grid-template-columns: 3fr 4fr 4fr 1fr;
+        grid-template-areas: ". g3-text g3-image ."; } }
+    #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content #gallery-3-image {
+      background-image: url("../img/section-3/boardwalk.jpg/");
+      background-position: center;
+      grid-area: g3-image; }
+      @media (min-width: 768px) {
+        #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content #gallery-3-image {
+          height: 100%; } }
+    #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content #gallery-3-text {
+      grid-area: g3-text; }
+      @media (min-width: 768px) {
+        #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content #gallery-3-text {
+          padding-right: 20px; }
+          #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content #gallery-3-text h4 {
+            text-align: right; } }
+      @media (min-width: 992px) {
+        #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content #gallery-3-text {
+          padding-right: 25px; } }
 #section-3 #section-3-container a:link,
 #section-3 #section-3-container a:visited {
   background-color: #ED9C4B;
