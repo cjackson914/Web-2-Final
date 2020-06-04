@@ -2,6 +2,15 @@
     Section 1
 ============= */
 #section-1{
+    #section-1-container{
+
+    @include md{
+        display: grid;
+        grid-template-areas: ". text text text"
+        "video video video .";
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 
     @include lg{
         display: grid;
@@ -18,73 +27,73 @@
     }
 
     #section-1-container-text {
-
-        @include md{
-            display: grid;
-            grid-template-areas: ". text";
-            grid-template-columns: auto 75%;
-        }
-        @include lg{
-            // grid-template-areas: "text";
-            // grid-template-columns: 100%;
-            display: contents;
-        }
-    }
-
-    #section-1-text{
         grid-area: text;
-        margin: 0 10px;
 
-        @include md{
-            margin: 0 10px 0 0;
-        }
-
-        @include xl{
-            padding: 32px 0;
-        }
-
-        h2{
-            color: $darkblue;
-            padding-bottom: 22px;
-
-            @include lg{
-                padding-top: 32px;
+        // @include md{
+        //     display: grid;
+        //     grid-template-areas: ". text";
+        //     grid-template-columns: auto 75%;
+        // }
+        // @include lg{
+        //     // grid-template-areas: "text";
+        //     // grid-template-columns: 100%;
+        //     display: contents;
+        // }
+        #section-1-text{
+            margin: 0 10px;
+    
+            @include md{
+                margin: 0 10px 0 0;
+            }
+    
+            @include xl{
+                padding: 32px 0;
+            }
+    
+            h2{
+                color: $darkblue;
+                padding-bottom: 22px;
+    
+                @include lg{
+                    padding-top: 32px;
+                }
+            }
+    
+            p{
+                text-align: justify;
+                padding-bottom: 22px;
             }
         }
-
-        p{
-            text-align: justify;
-            padding-bottom: 22px;
-        }
     }
+
+    
 
     #section-1-container-video{
-        @include md{
-            display: grid;
-            grid-template-areas: "video .";
-            grid-template-columns: 75% auto;
-        }
-        @include lg{
-            display: block;
-            // grid-template-areas: "photo";
-            // grid-template-columns: 100%;
-        }
+        grid-area:  video;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         section{
-            grid-area: video;
-            height: 35vh;
             width: 100%;
-
-            @include md{
-                // height: 30vh;
-                // height: 100%;
-                // width: 560;
-            }
-
-            @include lg{
-                height: 100%;
-            }
         }
     }
+
+
+    // section{
+    //     grid-area: video;
+    //     height: 35vh;
+    //     width: 100%;
+
+    //     @include md{
+    //         // height: 30vh;
+    //         // height: 100%;
+    //         // width: 560;
+    //     }
+
+        
+    // }
+
 
     // aside{
     //     grid-area: video;
@@ -104,4 +113,5 @@
     // }
 
             
+}
 }

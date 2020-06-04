@@ -92,6 +92,17 @@ footer{
     }
 
     #footer-phone{
+        a:link,
+            a:visited {
+                color: $white;
+                text-decoration: none;
+                transition: 0.25s;
+            }
+
+            a:hover,
+            a:active {
+                color: $orange;
+            }
         
 
         @include md{

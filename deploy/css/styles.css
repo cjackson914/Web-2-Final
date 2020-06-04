@@ -621,6 +621,14 @@ footer {
         color: #ED9C4B; }
   footer p {
     color: white; }
+  footer #footer-phone a:link,
+  footer #footer-phone a:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.25s; }
+  footer #footer-phone a:hover,
+  footer #footer-phone a:active {
+    color: #ED9C4B; }
   @media (min-width: 768px) {
     footer #footer-phone {
       grid-area: phone;
@@ -656,66 +664,54 @@ footer {
 /* =============
     Section 1
 ============= */
+@media (min-width: 768px) {
+  #section-1 #section-1-container {
+    display: grid;
+    grid-template-areas: ". text text text" "video video video .";
+    grid-template-columns: repeat(4, 1fr); } }
+
 @media (min-width: 992px) {
-  #section-1 {
+  #section-1 #section-1-container {
     display: grid;
     grid-template-areas: "video text";
     grid-template-columns: 60% auto;
     gap: 20px; } }
 
 @media (min-width: 1200px) {
-  #section-1 {
+  #section-1 #section-1-container {
     display: grid;
     grid-template-areas: ". video text .";
     grid-template-columns: auto 720px 480px auto;
     gap: 20px; } }
 
-@media (min-width: 768px) {
-  #section-1 #section-1-container-text {
-    display: grid;
-    grid-template-areas: ". text";
-    grid-template-columns: auto 75%; } }
+#section-1 #section-1-container #section-1-container-text {
+  grid-area: text; }
+  #section-1 #section-1-container #section-1-container-text #section-1-text {
+    margin: 0 10px; }
+    @media (min-width: 768px) {
+      #section-1 #section-1-container #section-1-container-text #section-1-text {
+        margin: 0 10px 0 0; } }
+    @media (min-width: 1200px) {
+      #section-1 #section-1-container #section-1-container-text #section-1-text {
+        padding: 32px 0; } }
+    #section-1 #section-1-container #section-1-container-text #section-1-text h2 {
+      color: #38587C;
+      padding-bottom: 22px; }
+      @media (min-width: 992px) {
+        #section-1 #section-1-container #section-1-container-text #section-1-text h2 {
+          padding-top: 32px; } }
+    #section-1 #section-1-container #section-1-container-text #section-1-text p {
+      text-align: justify;
+      padding-bottom: 22px; }
 
-@media (min-width: 992px) {
-  #section-1 #section-1-container-text {
-    display: contents; } }
-
-#section-1 #section-1-text {
-  grid-area: text;
-  margin: 0 10px; }
-  @media (min-width: 768px) {
-    #section-1 #section-1-text {
-      margin: 0 10px 0 0; } }
-  @media (min-width: 1200px) {
-    #section-1 #section-1-text {
-      padding: 32px 0; } }
-  #section-1 #section-1-text h2 {
-    color: #38587C;
-    padding-bottom: 22px; }
-    @media (min-width: 992px) {
-      #section-1 #section-1-text h2 {
-        padding-top: 32px; } }
-  #section-1 #section-1-text p {
-    text-align: justify;
-    padding-bottom: 22px; }
-
-@media (min-width: 768px) {
-  #section-1 #section-1-container-video {
-    display: grid;
-    grid-template-areas: "video .";
-    grid-template-columns: 75% auto; } }
-
-@media (min-width: 992px) {
-  #section-1 #section-1-container-video {
-    display: block; } }
-
-#section-1 #section-1-container-video section {
+#section-1 #section-1-container #section-1-container-video {
   grid-area: video;
-  height: 35vh;
-  width: 100%; }
-  @media (min-width: 992px) {
-    #section-1 #section-1-container-video section {
-      height: 100%; } }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #section-1 #section-1-container #section-1-container-video section {
+    width: 100%; }
+
 /* =============
     Section 2
 ============= */
@@ -743,64 +739,88 @@ footer {
 /* =============
     Section 3
 ============= */
-#section-3 #gallery ul li {
-  padding: 25px 0; }
-  #section-3 #gallery ul li div {
-    height: 271px;
-    background-size: cover; }
-  #section-3 #gallery ul li .section-3-text {
-    padding-top: 32px; }
-    #section-3 #gallery ul li .section-3-text h4 {
-      padding-bottom: 22px; }
-    #section-3 #gallery ul li .section-3-text p {
-      padding-bottom: 22px; }
+@media (min-width: 1200px) {
+  #section-3 #section-3-container {
+    display: grid;
+    grid-template-areas: ". gallery .";
+    grid-template-columns: auto 1200px auto; } }
 
-#section-3 #gallery ul #gallery-1 {
-  display: grid;
-  grid-template-areas: ". gallery-1";
-  grid-template-columns: auto 75%; }
-  #section-3 #gallery ul #gallery-1 #gallery-1-content {
-    grid-area: gallery-1;
-    padding: 0 10px; }
-    #section-3 #gallery ul #gallery-1 #gallery-1-content div {
-      background-image: url("../img/section-3/hammocks.jpg/"); }
+#section-3 #section-3-container #gallery {
+  grid-area: gallery; }
+  #section-3 #section-3-container #gallery ul li {
+    padding: 25px 0; }
+    #section-3 #section-3-container #gallery ul li div {
+      height: 271px;
+      background-size: cover; }
+    #section-3 #section-3-container #gallery ul li .section-3-text {
+      padding-top: 32px; }
+      #section-3 #section-3-container #gallery ul li .section-3-text h4 {
+        padding-bottom: 22px; }
+      #section-3 #section-3-container #gallery ul li .section-3-text p {
+        text-align: justify;
+        padding-bottom: 22px; }
+  #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content {
+    padding: 0 10px;
+    display: grid;
+    grid-template-areas: ". g1-image" ". g1-text";
+    grid-template-columns: auto 75%; }
+    @media (min-width: 768px) {
+      #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content {
+        grid-template-columns: auto 50% 37.5%;
+        grid-template-areas: ". g1-text g1-image"; } }
+    @media (min-width: 992px) {
+      #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content {
+        grid-template-columns: 2fr 5fr 4fr 1fr;
+        grid-template-areas: ". g1-text g1-image ."; } }
+    #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content #gallery-1-image {
+      background-image: url("../img/section-3/hammocks.jpg/");
+      background-position: center;
+      grid-area: g1-image; }
+    #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content #gallery-1-text {
+      grid-area: g1-text; }
+      @media (min-width: 768px) {
+        #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content #gallery-1-text {
+          padding-right: 20px; }
+          #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content #gallery-1-text h4 {
+            text-align: right; } }
+      @media (min-width: 992px) {
+        #section-3 #section-3-container #gallery ul #gallery-1 #gallery-1-content #gallery-1-text {
+          padding-right: 25px; } }
+  #section-3 #section-3-container #gallery ul #gallery-2 {
+    background-color: #F4F4F4;
+    display: grid;
+    grid-template-areas: "gallery-2 .";
+    grid-template-columns: 75% auto; }
+    #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content {
+      grid-area: gallery-2;
+      padding: 0 10px; }
+      #section-3 #section-3-container #gallery ul #gallery-2 #gallery-2-content div {
+        background-image: url("../img/section-3/oasis.jpg/"); }
+  #section-3 #section-3-container #gallery ul #gallery-3 {
+    display: grid;
+    grid-template-areas: ". gallery-3";
+    grid-template-columns: auto 75%; }
+    #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content {
+      grid-area: gallery-3;
+      padding: 0 10px; }
+      #section-3 #section-3-container #gallery ul #gallery-3 #gallery-3-content div {
+        background-image: url("../img/section-3/boardwalk.jpg/"); }
 
-#section-3 #gallery ul #gallery-2 {
-  background-color: #F4F4F4;
-  display: grid;
-  grid-template-areas: "gallery-2 .";
-  grid-template-columns: 75% auto; }
-  #section-3 #gallery ul #gallery-2 #gallery-2-content {
-    grid-area: gallery-2;
-    padding: 0 10px; }
-    #section-3 #gallery ul #gallery-2 #gallery-2-content div {
-      background-image: url("../img/section-3/oasis.jpg/"); }
-
-#section-3 #gallery ul #gallery-3 {
-  display: grid;
-  grid-template-areas: ". gallery-3";
-  grid-template-columns: auto 75%; }
-  #section-3 #gallery ul #gallery-3 #gallery-3-content {
-    grid-area: gallery-3;
-    padding: 0 10px; }
-    #section-3 #gallery ul #gallery-3 #gallery-3-content div {
-      background-image: url("../img/section-3/boardwalk.jpg/"); }
-
-#section-3 a:link,
-#section-3 a:visited {
+#section-3 #section-3-container a:link,
+#section-3 #section-3-container a:visited {
   background-color: #ED9C4B;
   border-radius: 100px;
   padding: 10px 20px; }
-  #section-3 a:link h5,
-  #section-3 a:visited h5 {
+  #section-3 #section-3-container a:link h5,
+  #section-3 #section-3-container a:visited h5 {
     color: #fff;
     display: inline-block; }
 
-#section-3 a:hover,
-#section-3 a:active {
+#section-3 #section-3-container a:hover,
+#section-3 #section-3-container a:active {
   background-color: #C66E16; }
-  #section-3 a:hover h5,
-  #section-3 a:active h5 {
+  #section-3 #section-3-container a:hover h5,
+  #section-3 #section-3-container a:active h5 {
     color: #fff; }
 
 /* =============

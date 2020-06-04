@@ -3,9 +3,18 @@
 ============= */
 #section-3{
 
+    #section-3-container{
+        @include xl{
+            display: grid;
+            grid-template-areas: ". gallery .";
+            grid-template-columns: auto 1200px auto;
+        }
+    
+
 
 
     #gallery{
+        grid-area: gallery;
 
         ul{
 
@@ -24,7 +33,7 @@
                     }                   
 
                     p{
-                        // text-align: justify;
+                        text-align: justify;
                         padding-bottom: 22px;
                     }
 
@@ -32,16 +41,46 @@
             }
 
             #gallery-1{
-                display: grid;
-                grid-template-areas: ". gallery-1";
-                grid-template-columns: auto 75%;
 
                     #gallery-1-content{
-                        grid-area: gallery-1;
+                        // grid-area: gallery-1;
                         padding: 0 10px;
+                        display: grid;
+                        grid-template-areas: ". g1-image"
+                        ". g1-text";
+                        grid-template-columns: auto 75%;
 
-                        div{
+                        @include md{
+                            grid-template-columns: auto 50% 37.5%;
+                            grid-template-areas: ". g1-text g1-image";
+                            
+                        }
+
+                        @include lg{
+                            grid-template-columns: 2fr 5fr 4fr 1fr;
+                            grid-template-areas: ". g1-text g1-image .";
+                            
+                        }
+
+                        #gallery-1-image{
                             background-image: url("../img/section-3/hammocks.jpg/");
+                            background-position: center;
+                            grid-area: g1-image;
+                        }
+
+                        #gallery-1-text{
+                            grid-area: g1-text;
+
+                            @include md{
+                                padding-right: 20px;
+                                h4{
+                                    text-align: right;
+                                }
+                            }
+
+                            @include lg{
+                                padding-right: 25px;
+                            }
                         }
                 }
             }
@@ -104,5 +143,5 @@
 				color: $white;
 			}
         }
-
+    }
 }
