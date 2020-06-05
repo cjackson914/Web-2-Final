@@ -5,8 +5,10 @@ header {
     background-color: $darkblue;
     color: $white;
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     z-index: 1000;
+    transition: all ease-in-out 0.2s;
 
 
     >div {

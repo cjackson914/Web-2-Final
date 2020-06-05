@@ -516,8 +516,10 @@ header {
   background-color: #38587C;
   color: #fff;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
-  z-index: 1000; }
+  z-index: 1000;
+  transition: all ease-in-out 0.2s; }
   header > div {
     display: grid;
     grid-template-areas: "logo burger" "nav nav";
