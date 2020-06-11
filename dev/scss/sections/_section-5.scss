@@ -1,32 +1,29 @@
 /* =============
     Section 5
 ============= */
-
-#section-5{
+#section-5 {
     background-color: $lightgray;
-
     padding: 30px 10px;
     text-align: justify;
 
-    @include md{
+    @include md {
         display: grid;
-        grid-template-areas: ". text";
+        grid-template-areas: ". text .";
+        grid-template-columns: auto 75% auto;
         padding: 40px 10px;
-        grid-template-columns: auto 75%;
     }
 
-    @include lg{
+    @include lg {
         grid-template-areas: ". text .";
         grid-template-columns: auto 83% auto;
     }
 
-    @include xl{
+    @include xl {
         grid-template-areas: ". text .";
         grid-template-columns: auto 940px auto;
     }
 
-
-    h3{
+    h3 {
         grid-area: text;
     }
 }

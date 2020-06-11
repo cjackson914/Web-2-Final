@@ -1,68 +1,56 @@
 /* =============
     Section 4
 ============= */
-
-#section-4{
+#section-4 {
     background-color: $darkblue;
 
-
-    @include xl{
+    @include xl {
         display: grid;
         grid-template-areas: ". container .";
         grid-template-columns: auto 1200px auto;
     }
 
-
-    #section-4-container{
+    #section-4-container {
         grid-area: container;
 
-        @include md{
+        @include md {
             display: grid;
+            gap: 20px;
             grid-template-areas: "photo text";
             grid-template-columns: 50% auto;
-            gap: 20px;
         }
 
-        @include lg{
+        @include lg {
             grid-template-areas: "photo text";
             grid-template-columns: 60% auto;
         }
-
-        // @include xl{
-        //     grid-template-areas: "text photo";
-        //     grid-template-columns: 62.5% auto;
-        //     gap: 20px;
-        //     margin: 0px;
-        // }
-
     }
 
-    #section-4-text{
+    #section-4-text {
         grid-area: text;
         margin: 0 10px;
 
-        h2{
-            padding-top: 32px;
+        h2 {
+            color: $white !important;
             padding-bottom: 22px;
-            color: $white !important; 
+            padding-top: 32px;
         }
 
-        p{
-            padding-bottom: 22px;
+        p {
             color: $white !important;
+            padding-bottom: 22px;
             text-align: justify;
         }
     }
 
-
-    aside{
-        grid-area: photo;
+    aside {
         background-image: url("../img/section-4/foodtruck.jpg");
         background-position: center;
         background-size: cover;
+        grid-area: photo;
         height: 50vh;
 
-        @include md{
+        @include md {
             height: 100%;
         }
     }

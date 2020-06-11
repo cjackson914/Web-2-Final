@@ -1,35 +1,31 @@
 /* =============
     Base
 ============= */
-
-// html {
-//     scroll-behavior: smooth;
-//   }
-
-ul{
+ul {
     margin: 0;
     padding: 0;
-    li{
+
+    li {
         list-style: none;
     }
 }
 
-a{
+a {
+    display: inline-block;
     text-decoration: none;
     transition: 0.25s;
-    display: inline-block;
 }
 
-
 .show-for-sm {
-    @include md{
+    @include md {
         display: none;
     }
 }
 
 .show-for-md {
     display: none;
-    @include md{
+
+    @include md {
         display: inline;
     }
 }
@@ -49,12 +45,3 @@ a{
         margin-top: 100px;
     }
 }
-
-
-// .mobilehide{
-//     display: none;
-
-//     @include md {
-//         display:;
-//     }
-// }

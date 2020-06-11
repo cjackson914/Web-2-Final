@@ -26,7 +26,8 @@ header {
         #header-logo-container {
             grid-area: logo;
             padding: 15px 0px 15px 35px;
-            img{
+
+            img {
                 height: 60px;
                 width: auto;
             }
@@ -38,7 +39,7 @@ header {
             display: flex;
             grid-area: burger;
             justify-content: flex-end;
-            padding-right: 35px;
+            padding: 0 35px 0 100px;
 
             @include md {
                 display: none !important;
@@ -50,6 +51,7 @@ header {
                 color: white;
             }
         }
+
         #nav-container {
             background-color: $blue;
             display: none;

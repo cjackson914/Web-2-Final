@@ -1,22 +1,21 @@
 /* =============
     Section 6
 ============= */
-#section-6{
+#section-6 {
+    background-image: url("../img/section-6/icecream.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    height: 260px;
 
-background-image: url("../img/section-6/icecream.jpg");
-background-position: center bottom;
-background-size: cover;
-height: 260px;
+    @include md {
+        height: 436px;
+    }
 
-@include md{
-    height: 436px;
-}
+    @include lg {
+        height: 519px;
+    }
 
-@include lg{
-    height: 519px;
-}
-
-@include xl{
-    height: 643px;
-}
+    @include xl {
+        height: 643px;
+    }
 }

@@ -1,84 +1,90 @@
 /* =============
     Section 7
 ============= */
-#section-7{
-
-	display: grid;
-	grid-template-areas: ". section-7 .";
+#section-7 {
+    display: grid;
+    grid-template-areas: ". section-7 .";
     grid-template-columns: 10px auto 10px;
-    padding: 20px 0px;
     text-align: justify;
-    // padding: 44px 0 32px;
-
-    // @include lg{
-    //     padding: 0 40px;
-    // } 
 
     @include xl {
-		display: grid;
-		grid-template-areas: ". section-7 .";
-		grid-template-columns: auto 1200px auto;
-	}
+        display: grid;
+        grid-template-areas: ". section-7 .";
+        grid-template-columns: auto 1200px auto;
+    }
 
     #cards {
         grid-area: section-7;
-        
+
         ul {
+            // gap: 20px;
             display: grid;
-            gap: 20px;
+
             @include md {
                 display: grid;
-                grid-template-areas: 
-                "c1 c1 c2 c2"
+                gap: 20px;
+                grid-template-areas: "c1 c1 c2 c2"
                     ". c3 c3 .";
                 grid-template-columns: repeat(4, 1fr);
             }
+
             @include lg {
                 grid-template-areas: "c1 c2 c3";
                 grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
             }
+
             li {
                 div {
                     background-size: cover;
                     height: 225px;
                 }
+
                 section {
-                    padding: 20px;
-                    @include lg {
-                        padding: 24px;
+                    padding: 20px 20px 20px 20px;
+
+                    @include md {
+                        padding: 32px 24px 24px 24px;
                     }
+
                     h4 {
                         text-align: center;
+
+                        @include md {
+                            padding-bottom: 22px;
+                        }
                     }
+
                     p {
-                        margin: 20px 0;
                         text-align: justify;
                     }
                 }
             }
+
             #card-1 {
                 @include md {
                     grid-area: c1;
                 }
+
                 div {
                     background-image: url("../img/section-7/concert.jpg");
                 }
             }
+
             #card-2 {
                 @include md {
                     grid-area: c2;
                 }
+
                 div {
                     background-image: url("../img/section-7/art.jpg");
                 }
-
-                
             }
+
             #card-3 {
                 @include md {
                     grid-area: c3;
                 }
+
                 div {
                     background-image: url("../img/section-7/skating.jpg");
                     position: center bottom;
@@ -87,28 +93,28 @@
         }
     }
 
-    .more-button{
+    .more-button {
         text-align: center;
     }
 
     a:link,
-        a:visited {
-            background-color: $orange;
-			border-radius: 100px;
-            padding: 10px 20px;
+    a:visited {
+        background-color: $orange;
+        border-radius: 100px;
+        padding: 10px 20px;
 
-			h5 {
-                color: $white;
-                display: inline-block;
-
-			}
-		}
-		a:hover,
-        a:active {
-			background-color: $darkorange;
-			h5 {
-				color: $white;
-			}
+        h5 {
+            color: $white;
+            display: inline-block;
         }
-}
+    }
 
+    a:hover,
+    a:active {
+        background-color: $darkorange;
+
+        h5 {
+            color: $white;
+        }
+    }
+}

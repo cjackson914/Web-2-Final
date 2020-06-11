@@ -1,219 +1,212 @@
 /* =============
     Section 3
 ============= */
-#section-3{
-
-    #section-3-container{
-        @include xl{
-            display: grid;
-            grid-template-areas: ". gallery .";
-            grid-template-columns: auto 1200px auto;
-        }
-    
-
-
-
-    #gallery{
+#section-3 {
+    #gallery {
         grid-area: gallery;
 
-        ul{
-
-            li{
-                padding: 25px 0; //move to individual gallery items later//
-                div{
-                    height: 271px;
+        ul {
+            li {
+                div {
                     background-size: cover;
+                    height: 271px;
                 }
 
-                .section-3-text{
+                .section-3-text {
                     padding-top: 32px;
 
                     h4 {
                         padding-bottom: 22px;
-                    }                   
+                        text-align: center;
 
-                    p{
-                        text-align: justify;
+                        @include md {
+                            text-align: left;
+                        }
+                    }
+
+                    p {
                         padding-bottom: 22px;
+                        text-align: justify;
                     }
-
                 }
             }
 
-            #gallery-1{
-
-                    #gallery-1-content{
-                        // grid-area: gallery-1;
-                        padding: 0 10px;
-                        display: grid;
-                        grid-template-areas: ". g1-image"
-                        ". g1-text";
-                        grid-template-columns: auto 75%;
-
-                        @include md{
-                            grid-template-columns: auto 50% 37.5%;
-                            grid-template-areas: ". g1-text g1-image";
-                            
-                        }
-
-                        @include lg{
-                            grid-template-columns: 2fr 5fr 4fr 1fr;
-                            grid-template-areas: ". g1-text g1-image .";
-                            
-                        }
-
-                        #gallery-1-image{
-                            background-image: url("../img/section-3/hammocks.jpg/");
-                            background-position: center;
-                            grid-area: g1-image;
-
-                            @include md{
-                                height: 100%;
-                            }
-                        }
-
-                        #gallery-1-text{
-                            grid-area: g1-text;
-
-                            @include md{
-                                padding-right: 20px;
-                                h4{
-                                    text-align: right;
-                                }
-                            }
-
-                            @include lg{
-                                padding-right: 25px;
-                            }
-                        }
-                }
-            }
-
-            #gallery-2{
-                background-color: $lightgray;
-
-                #gallery-2-content{
-                    // grid-area: gallery-1;
-                    padding: 0 10px;
+            #gallery-1 {
+                #gallery-1-content {
                     display: grid;
-                    grid-template-areas: "g2-image ."
-                    "g2-text .";
-                    grid-template-columns: 75% auto;
+                    grid-template-areas: "g1-image"
+                        "g1-text";
+                    padding: 0 10px 25px 10px;
 
-                    @include md{
-                        grid-template-columns: 3fr 5fr;
-                        grid-template-areas: "g2-image g2-text";
-                        
+                    @include md {
+                        grid-template-areas: ". g1-text g1-image";
+                        grid-template-columns: 1fr 4fr 3fr;
                     }
 
-                    @include lg{
-                        grid-template-columns: 1fr 4fr 6fr 1fr;
-                        grid-template-areas: ". g2-image g2-text .";
-                        
+                    @include lg {
+                        grid-template-areas: ". g1-text g1-image .";
+                        grid-template-columns: 2fr 5fr 4fr 1fr;
                     }
 
-                    #gallery-2-image{
-                        background-image: url("../img/section-3/oasis.jpg/");
+                    @include xl {
+                        grid-template-areas: ". . g1-text g1-image .";
+                        grid-template-columns: auto 100px 500px 400px auto;
+                    }
+
+                    #gallery-1-image {
+                        background-image: url("../img/section-3/hammocks.jpg/");
                         background-position: center;
-                        grid-area: g2-image;
+                        grid-area: g1-image;
 
-                        @include md{
+                        @include md {
                             height: 100%;
                         }
                     }
 
-                    #gallery-2-text{
-                        grid-area: g2-text;
+                    #gallery-1-text {
+                        grid-area: g1-text;
 
-                        @include md{
-                            padding-left: 20px;
-                            h4{
-                                text-align: left;
-                            }
-                        }
-
-                        @include lg{
-                            padding-left: 25px;
-                        }
-                    }
-            }
-            }
-
-            #gallery-3{
-
-                #gallery-3-content{
-                    // grid-area: gallery-1;
-                    padding: 0 10px;
-                    display: grid;
-                    grid-template-areas: ". g3-image"
-                    ". g3-text";
-                    grid-template-columns: auto 75%;
-
-                    @include md{
-                        grid-template-columns: 2fr 3fr 3fr;
-                        grid-template-areas: ". g3-text g3-image";
-                        
-                    }
-
-                    @include lg{
-                        grid-template-columns: 3fr 4fr 4fr 1fr;
-                        grid-template-areas: ". g3-text g3-image .";
-                        
-                    }
-
-                    #gallery-3-image{
-                        background-image: url("../img/section-3/boardwalk.jpg/");
-                        background-position: center;
-                        grid-area: g3-image;
-
-                        @include md{
-                            height: 100%;
-                        }
-                    }
-
-                    #gallery-3-text{
-                        grid-area: g3-text;
-
-                        @include md{
+                        @include md {
                             padding-right: 20px;
-                            h4{
+
+                            h4 {
                                 text-align: right;
                             }
                         }
 
-                        @include lg{
+                        @include lg {
                             padding-right: 25px;
                         }
                     }
-            }
+                }
             }
 
+            #gallery-2 {
+                background-color: $lightteal;
+
+                #gallery-2-content {
+                    display: grid;
+                    grid-template-areas: "g2-image"
+                        "g2-text";
+                    padding: 25px 10px;
+
+                    @include md {
+                        grid-template-areas: "g2-image g2-text";
+                        grid-template-columns: 3fr 4fr 1fr;
+                    }
+
+                    @include lg {
+                        grid-template-areas: ". g2-image g2-text .";
+                        grid-template-columns: 1fr 4fr 5fr 2fr;
+                    }
+
+                    @include xl {
+                        grid-template-areas: ". g2-image g2-text . .";
+                        grid-template-columns: auto 400px 500px 100px auto;
+                    }
+
+                    #gallery-2-image {
+                        background-image: url("../img/section-3/oasis.jpg/");
+                        background-position: center;
+                        grid-area: g2-image;
+
+                        @include md {
+                            height: 100%;
+                        }
+                    }
+
+                    #gallery-2-text {
+                        grid-area: g2-text;
+
+                        @include md {
+                            padding-left: 20px;
+
+                            h4 {
+                                text-align: left;
+                            }
+                        }
+
+                        @include lg {
+                            padding-left: 25px;
+                        }
+                    }
+                }
+            }
+
+            #gallery-3 {
+                #gallery-3-content {
+                    display: grid;
+                    grid-template-areas: "g3-image"
+                        "g3-text";
+                    padding: 25px 10px 0px 10px;
+
+                    @include md {
+                        grid-template-areas: ". g3-text g3-image";
+                        grid-template-columns: 1fr 4fr 3fr;
+                    }
+
+                    @include lg {
+                        grid-template-areas: ". g3-text g3-image .";
+                        grid-template-columns: 2fr 5fr 4fr 1fr;
+                    }
+
+                    @include xl {
+                        grid-template-areas: ". . g3-text g3-image .";
+                        grid-template-columns: auto 100px 500px 400px auto;
+                    }
+
+                    #gallery-3-image {
+                        background-image: url("../img/section-3/boardwalk.jpg/");
+                        background-position: center;
+                        grid-area: g3-image;
+
+                        @include md {
+                            height: 100%;
+                        }
+                    }
+
+                    #gallery-3-text {
+                        grid-area: g3-text;
+
+                        @include md {
+                            padding-right: 20px;
+
+                            h4 {
+                                text-align: right;
+                            }
+                        }
+
+                        @include lg {
+                            padding-right: 25px;
+                        }
+                    }
+                }
+            }
         }
-
     }
 
-    .more-button{
-        // text-align: center;
+    .more-button {
+        text-align: center;
     }
 
     a:link,
-        a:visited {
-            background-color: $orange;
-			border-radius: 100px;
-            padding: 10px 20px;
+    a:visited {
+        background-color: $orange;
+        border-radius: 100px;
+        padding: 10px 20px;
 
-			h5 {
-                color: $white;
-                display: inline-block;
+        h5 {
+            color: $white;
+            display: inline-block;
+        }
+    }
 
-			}
-		}
-		a:hover,
-        a:active {
-			background-color: $darkorange;
-			h5 {
-				color: $white;
-			}
+    a:hover,
+    a:active {
+        background-color: $darkorange;
+
+        h5 {
+            color: $white;
         }
     }
 }

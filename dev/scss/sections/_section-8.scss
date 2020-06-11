@@ -1,70 +1,58 @@
 /* =============
     Section 8
 ============= */
-
-#section-8{
+#section-8 {
     background-color: $teal;
 
-
-    @include xl{
+    @include xl {
         display: grid;
         grid-template-areas: ". container .";
         grid-template-columns: auto 1200px auto;
     }
 
-
-    #section-8-container{
+    #section-8-container {
         grid-area: container;
         margin: 0 10px;
         padding: 32px 0px;
 
-        @include md{
+        @include md {
             display: grid;
+            gap: 20px;
             grid-template-areas: "text photo";
             grid-template-columns: 62.5% auto;
-            gap: 20px;
         }
 
-        @include lg{
+        @include lg {
+            gap: 20px;
             grid-template-areas: "text photo";
             grid-template-columns: 60% auto;
-            gap: 20px;
             margin: 0px 96px;
         }
-
-        // @include xl{
-        //     grid-template-areas: "text photo";
-        //     grid-template-columns: 62.5% auto;
-        //     gap: 20px;
-        //     margin: 0px;
-        // }
-
     }
 
-    #section-8-text{
+    #section-8-text {
         grid-area: text;
 
-        h2{
+        h2 {
+            color: $white !important;
             padding-bottom: 22px;
-            color: $white !important; 
         }
 
-        p{
-            padding-bottom: 22px;
+        p {
             color: $white !important;
+            padding-bottom: 22px;
             text-align: justify;
         }
     }
 
-
-    aside{
-        grid-area: photo;
-        background-image: url("../img/section-8/map.jpg");
+    aside {
+        background-image: url("../img/section-8/map.png");
         background-position: center;
         background-size: cover;
+        grid-area: photo;
         height: 300px;
 
-        @include md{
+        @include md {
             height: 100%;
         }
     }

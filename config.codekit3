@@ -162,6 +162,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/deploy/img/section-8/map.png": {
+		"ft": 32768,
+		"iS": 267220,
+		"oA": 0,
+		"oAP": "/deploy/img/section-8/map.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/deploy/index.html": {
 		"cB": 0,
 		"ft": 8192,

@@ -1,72 +1,71 @@
 /* =============
     Footer
 ============= */
-footer{
+footer {
     background-color: $darkblue;
     color: $white;
 
-    @include lg{
+    @include lg {
         display: grid;
         grid-template-areas: ". content .";
         grid-template-columns: auto 720px auto;
     }
 
-    @include xl{
+    @include xl {
         grid-template-columns: auto 940px auto;
     }
 
-    #footer-container{
-        grid-area: content;
+    #footer-container {
         display: grid;
+        grid-area: content;
         grid-template-areas: "logo social";
         grid-template-columns: 50% auto;
 
-        @include md{
+        @include md {
             grid-template-areas: "social logo address"
-            "phone logo address";
+                "phone logo address";
             grid-template-columns: auto 25% auto;
             margin: 0 10px;
         }
     }
 
     #footer-logo-container {
-        grid-area: logo;
-        padding: 15px 0px 15px 35px;
-        display: flex;
         align-items: center;
+        display: flex;
+        grid-area: logo;
+        padding: 15px 0px 15px 10px;
 
         @include md {
-            padding: 15px 0px;
             justify-content: center;
+            padding: 15px 0px;
         }
-        img{
+
+        img {
             height: 60px;
             width: auto;
 
-            @include md{
+            @include md {
                 height: 80px;
             }
         }
-
     }
 
-    ul{
-        grid-area: social;
-        display: flex;
-        justify-content: flex-end;
+    ul {
         align-items: center;
         color: white;
-        padding-right: 35px;
+        display: flex;
+        grid-area: social;
+        justify-content: flex-end;
 
-        li:first-child{
+        li:first-child {
             padding-left: 0px;
         }
 
-        @include md{
-            padding-right: 0;
-            justify-content: flex-start;
+        @include md {
             align-items: flex-end;
+            justify-content: flex-start;
             padding-bottom: 5px;
+            padding-right: 0;
         }
 
         li {
@@ -87,42 +86,35 @@ footer{
         }
     }
 
-    p{
-        color:white;
+    p {
+        color: white;
     }
 
-    #footer-phone{
+    #footer-phone {
+
         a:link,
-            a:visited {
-                color: $white;
-                text-decoration: none;
-                transition: 0.25s;
-            }
+        a:visited {
+            color: $white;
+            text-decoration: none;
+            transition: 0.25s;
+        }
 
-            a:hover,
-            a:active {
-                color: $orange;
-            }
-        
+        a:hover,
+        a:active {
+            color: $orange;
+        }
 
-        @include md{
+        @include md {
             grid-area: phone;
             padding-top: 5px;
         }
     }
 
-    #footer-address{
-
-        @include md{
+    #footer-address {
+        @include md {
             grid-area: address;
-            text-align: right;
             padding: 15px 0;
+            text-align: right;
         }
-        
     }
-
-    
-
-
-
 }
